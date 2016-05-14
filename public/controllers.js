@@ -19,4 +19,7 @@ phonecatApp.controller('PhoneListCtrl', function ($scope, $http) {
       return !$scope.search || comment.message.indexOf($scope.search) >= 0;
     }): [];
   };
+  $scope.hash = function (email) {
+    return md5(email);
+  }
 });
