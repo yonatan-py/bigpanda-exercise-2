@@ -1,47 +1,51 @@
 .main {
-  padding: 50px;
+  font-size: 11.5px;
   background: #F9F9F9;
   width: 440px;
   padding-top: 40px;
   padding-bottom: 40px;
+  padding-left: 47px;
+  padding-right: 47px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form {
   background: #EFEFEF;
-  width: 347px;
   border-radius: 4px 4px 0 0;
+  border: #EFEFEF solid 2px
 }
 
 .form form {
   margin-bottom: 0px;
-  padding: 20px;
+  padding: 18px;
   padding-bottom: 50px;
 }
 
 .form .email {
   background: white;
-  height: 42px;
-  width: calc(100%);
+  height: 35px;
   border: solid 1px #C8C8C8;
-  margin-bottom: 10px
-
+  margin-bottom: 11px;
+  padding-top: 8px;
+  padding-left: 12px;
 }
 
 .form .email input {
-  width: calc(100%);
+  width: 100%;
   border: none;
   outline: none;
-  padding: 10px;
 }
 
 .form .message {
   border: solid 1px #C8C8C8;
   margin-bottom: 10px;
   background: white;
+  padding-top: 8px;
+  padding-left: 12px;
 }
 
 .form .message textarea {
-  padding: 10px;
   resize: none;
   overflow: hidden;
   border: none;
@@ -55,14 +59,13 @@
   height: 30px;
   border-radius: 4px;
   font-weight: bold;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
   float: right;
 }
 
 .comments {
   background: white;
-  width: 347px;
   border: #EFEFEF solid 2px;
   border-radius: 0 0 4px 4px;
 }
