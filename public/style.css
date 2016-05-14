@@ -1,0 +1,90 @@
+body {
+  padding: 30px;
+  background: #F9F9F9;
+}
+
+.form {
+  background: #EFEFEF;
+  width: 347px;
+}
+
+.form form {
+  margin-bottom: 0px;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+.form input.email {
+  height: 30px;
+  width: calc(100%);
+  border: solid 1px #C8C8C8;
+  margin-bottom: 10px
+}
+
+.form textarea.message {
+  border: solid 1px #C8C8C8;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.submit {
+  background: #43A6E1;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: right;
+}
+
+.comments {
+  background: white;
+  width: 347px;
+
+}
+
+.comments .search {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+}
+
+.comments .search input {
+  height: 30px;
+  width: 100%;
+}
+
+.comments ul {
+  padding-left: 20px;
+}
+
+.comments li {
+  list-style: none;
+  clear: both;
+  height: 65px;
+}
+
+.comment-img,
+.comment-body {
+    float: left;
+}
+
+.comment-body {
+  margin-left: 10px;
+}
+
+.comments li img {
+  height: 45px;
+  border-radius: 5px;
+}
+
+.comments li .email {
+  font-weight: bold;
+}
+
+.comments li .message {
+  color: #888585;
+      margin-top: 7px;
+}

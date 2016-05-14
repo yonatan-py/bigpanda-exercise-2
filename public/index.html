@@ -1,0 +1,42 @@
+<html ng-app="phonecatApp">
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="/controllers.js"></script>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body ng-controller="PhoneListCtrl">
+    <div class="form">
+      <form ng-submit="sendComment()">
+        <div class="">
+          <input class="email" type="text" placeholder="  Email" ng-model="email">
+        </div>
+
+          <!-- <input class="message" type="text"  ng-model="message"> -->
+          <textarea class="message" rows="5" cols="36" placeholder=" Message" ng-model="message"></textarea>
+        <input class="submit" type="submit" value="SUBMIT">
+      </form>
+    </div>
+    <div class="comments">
+      <div class="search">
+          <input type="text" placeholder="Filter" ng-model="search" >
+      </div>
+
+      <ul>
+        <li ng-repeat="comment in comments()">
+            <div class="comment-img">
+              <img src="http://www.gravatar.com/avatar/{{comment.email}}" alt="" />
+            </div>
+            <div class="comment-body">
+              <div class="email">
+                {{comment.email}}
+              </div>
+              <div class="message">
+                {{comment.message}}
+              </div>
+            </div>
+
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
