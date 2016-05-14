@@ -1,6 +1,6 @@
-var phonecatApp = angular.module('phonecatApp', []);
+var phonecatApp = angular.module('commentsApp', []);
 
-phonecatApp.controller('PhoneListCtrl', function ($scope, $http) {
+phonecatApp.controller('CommentsCtrl', function ($scope, $http) {
   $http.get('/comments').then(function (response) {
     $scope._comments = response.data;
   });

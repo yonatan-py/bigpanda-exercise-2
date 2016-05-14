@@ -1,11 +1,15 @@
-body {
-  padding: 30px;
+.main {
+  padding: 50px;
   background: #F9F9F9;
+  width: 440px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .form {
   background: #EFEFEF;
   width: 347px;
+  border-radius: 4px 4px 0 0;
 }
 
 .form form {
@@ -59,7 +63,8 @@ body {
 .comments {
   background: white;
   width: 347px;
-
+  border: #EFEFEF solid 2px;
+  border-radius: 0 0 4px 4px;
 }
 
 .comments .search {
@@ -113,5 +118,8 @@ body {
 
 .comments li .message {
   color: #888585;
-      margin-top: 7px;
+  margin-top: 7px;
+  overflow: hidden;
+  width: 250px;
+  height: 20px;
 }

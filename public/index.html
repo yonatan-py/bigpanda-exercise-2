@@ -1,4 +1,4 @@
-<html ng-app="phonecatApp">
+<html ng-app="commentsApp">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.3.0/js/md5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -7,41 +7,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
   </head>
-  <body ng-controller="PhoneListCtrl">
-    <div class="form">
-      <form ng-submit="sendComment()">
-        <div class="email">
-          <input type="text" placeholder="Email" ng-model="email">
-        </div>
-        <div class="message">
-          <textarea rows="5" cols="33" placeholder="Message" ng-model="message"></textarea>
-        </div>
+  <body>
+    <div class="main" ng-controller="CommentsCtrl">
+      <div class="form">
+        <form ng-submit="sendComment()">
+          <div class="email">
+            <input type="text" placeholder="Email" ng-model="email">
+          </div>
+          <div class="message">
+            <textarea rows="5" cols="33" placeholder="Message" ng-model="message"></textarea>
+          </div>
 
-        <input class="submit" type="submit" value="SUBMIT">
-      </form>
-    </div>
-    <div class="comments">
-      <div class="search">
-          <span class="glass glyphicon glyphicon-search"></span>
-          <input type="text" placeholder="Filter" ng-model="search" >
+          <input class="submit" type="submit" value="SUBMIT">
+        </form>
       </div>
+      <div class="comments">
+        <div class="search">
+            <span class="glass glyphicon glyphicon-search"></span>
+            <input type="text" placeholder="Filter" ng-model="search" >
+        </div>
 
-      <ul>
-        <li ng-repeat="comment in comments()">
-            <div class="comment-img">
-              <img src="http://www.gravatar.com/avatar/{{hash(comment.email)}}" alt="" />
-            </div>
-            <div class="comment-body">
-              <div class="email">
-                {{comment.email}}
+        <ul>
+          <li ng-repeat="comment in comments()">
+              <div class="comment-img">
+                <img src="http://www.gravatar.com/avatar/{{hash(comment.email)}}" alt="" />
               </div>
-              <div class="message">
-                {{comment.message}}
+              <div class="comment-body">
+                <div class="email">
+                  {{comment.email}}
+                </div>
+                <div class="message">
+                  {{comment.message}}
+                </div>
               </div>
-            </div>
 
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
