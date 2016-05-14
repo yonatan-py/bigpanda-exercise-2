@@ -14,17 +14,34 @@ body {
   padding-bottom: 50px;
 }
 
-.form input.email {
-  height: 30px;
+.form .email {
+  background: white;
+  height: 42px;
   width: calc(100%);
   border: solid 1px #C8C8C8;
   margin-bottom: 10px
+
 }
 
-.form textarea.message {
+.form .email input {
+  width: calc(100%);
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.form .message {
   border: solid 1px #C8C8C8;
   margin-bottom: 10px;
+  background: white;
+}
+
+.form .message textarea {
+  padding: 10px;
   resize: none;
+  overflow: hidden;
+  border: none;
+  outline: none;
 }
 
 .submit {

@@ -10,12 +10,13 @@
   <body ng-controller="PhoneListCtrl">
     <div class="form">
       <form ng-submit="sendComment()">
-        <div class="">
-          <input class="email" type="text" placeholder="  Email" ng-model="email">
+        <div class="email">
+          <input type="text" placeholder="Email" ng-model="email">
+        </div>
+        <div class="message">
+          <textarea rows="5" cols="33" placeholder="Message" ng-model="message"></textarea>
         </div>
 
-          <!-- <input class="message" type="text"  ng-model="message"> -->
-          <textarea class="message" rows="5" cols="36" placeholder=" Message" ng-model="message"></textarea>
         <input class="submit" type="submit" value="SUBMIT">
       </form>
     </div>
