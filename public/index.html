@@ -1,7 +1,10 @@
 <html ng-app="phonecatApp">
   <head>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.3.0/js/md5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="/controllers.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
   </head>
   <body ng-controller="PhoneListCtrl">
@@ -18,13 +21,14 @@
     </div>
     <div class="comments">
       <div class="search">
+          <span class="glass glyphicon glyphicon-search"></span>
           <input type="text" placeholder="Filter" ng-model="search" >
       </div>
 
       <ul>
         <li ng-repeat="comment in comments()">
             <div class="comment-img">
-              <img src="http://www.gravatar.com/avatar/{{comment.email}}" alt="" />
+              <img src="http://www.gravatar.com/avatar/{{hash(comment.email)}}" alt="" />
             </div>
             <div class="comment-body">
               <div class="email">
